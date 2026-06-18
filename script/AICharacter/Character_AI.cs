@@ -1,4 +1,4 @@
-using PP;
+﻿using PP;
 using UnityEngine;
 using UnityEngine.Events;
 namespace pp{
@@ -18,9 +18,6 @@ public class Character_AI : MonoBehaviour
     public AI_Communication aiCommunication;
     [SerializeField] private UnityEvent onPlayerApproach;
 
-    // [Header("Aliyun Bailian API")]
-    // [SerializeField] private string apiKey = "sk-xxx";
-    // [SerializeField] private string appId = "your_app_id";
 
     private bool playerNearby;
     private bool isAwaitingResponse;
@@ -49,7 +46,7 @@ public class Character_AI : MonoBehaviour
 
         if (aiCommunication != null)
         {
-            // 配置 AI_Communication �?API 信息
+            // 配置 AI_Communication 的 API 信息
             // aiCommunication.apiKey = apiKey;
             // aiCommunication.appId = appId;
             aiCommunication.OnResponseReceived += HandleAIResponse;
@@ -159,7 +156,7 @@ public class Character_AI : MonoBehaviour
     {
         if (aiCommunication == null)
         {
-            dialogueUI?.SetOutputText("AI 通信组件未配置�?);
+            dialogueUI?.SetOutputText("AI 通信组件未配置。");
             return;
         }
 
